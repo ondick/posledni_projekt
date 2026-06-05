@@ -24,6 +24,22 @@ public class HelloController {
     private final ObservableList<String> PoznamkyObservable = FXCollections.observableArrayList();
 
     @FXML
+    public void initialize() {
+        PoznamkyObservable.add("Čumí do mobilu");
+        PoznamkyObservable.add("Je to hlupák");
+        PoznamkyObservable.add("Bere kratom bez nabídnutí učiteli");
+        PoznamkyObservable.add("Mlátí spolužáky");
+        PoznamkyObservable.add("Počurál se");
+        PoznamkyListView.setItems(PoznamkyObservable);
+        ZaciObservable.add("Ondra");
+        ZaciObservable.add("Štěpán");
+        ZaciObservable.add("Kuba");
+        ZaciObservable.add("Michal");
+        ZaciObservable.add("Jirka");
+        ZaciListView.setItems(ZaciObservable);
+    }
+
+    @FXML
     public void pridejZaka(){
         if(!TextFieldZak.getText().equals("")){
             ZaciObservable.add(TextFieldZak.getText());
